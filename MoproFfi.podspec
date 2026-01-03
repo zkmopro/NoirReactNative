@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => min_ios_version_supported }
-  s.source       = { :git => "https://github.com/zkmopro/react-native-app.git", :tag => "#{s.version}" }
-  s.source       = { :http => "https://ci-keys.zkmopro.org/MoproFfiFramework.xcframework.zip"}
+  s.source       = { :git => "https://github.com/zkmopro/NoirReactNative.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}", "ios/generated/**/*.{h,m,mm}", "cpp/**/*.{hpp,cpp,c,h}", "cpp/generated/**/*.{hpp,cpp,c,h}"
   s.vendored_frameworks = "MoproFfiFramework.xcframework"
+  s.preserve_paths = "MoproFfiFramework.xcframework"
   s.dependency    "uniffi-bindgen-react-native", "0.29.3-1"
 
   # Use install_modules_dependencies helper to install the dependencies if React Native version >=0.71.0.
