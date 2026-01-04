@@ -25,6 +25,7 @@ include_directories(
 
 add_library(mopro-ffi            SHARED
     ../cpp/mopro-ffi.cpp
+    ../cpp/generated/mopro_example_app_noir.cpp
     cpp-adapter.cpp
 )
 

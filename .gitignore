@@ -2,3 +2,7 @@
 node_modules/
 lib/
 MoproFfiFramework.xcframework/
+MoproFfiFramework.xcframework.zip
+android/.cxx/
+android/build/
+android/.gradle/
