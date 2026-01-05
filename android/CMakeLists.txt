@@ -25,7 +25,7 @@ include_directories(
 
 add_library(mopro-ffi            SHARED
     ../cpp/mopro-ffi.cpp
-    ../cpp/generated/mopro_example_app_noir.cpp
+    ../cpp/generated/mopro_example_app.cpp
     cpp-adapter.cpp
 )
 
@@ -42,11 +42,11 @@ set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-z,max-page-size
 
 cmake_path(
   SET MY_RUST_LIB
-  ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libmopro_example_app_noir.a
+  ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libmopro_example_app.so
   NORMALIZE
 )
-add_library(my_rust_lib STATIC IMPORTED)
-set_target_properties(my_rust_lib PROPERTIES IMPORTED_LOCATION ${MY_RUST_LIB})
+add_library(my_rust_lib SHARED IMPORTED)
+set_target_properties(my_rust_lib PROPERTIES IMPORTED_LOCATION ${MY_RUST_LIB} IMPORTED_NO_SONAME ON)
 
 # Add ReactAndroid libraries, being careful to account for different versions.
 find_package(ReactAndroid REQUIRED CONFIG)
