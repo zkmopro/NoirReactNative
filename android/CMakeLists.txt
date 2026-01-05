@@ -25,7 +25,7 @@ include_directories(
 
 add_library(mopro-ffi            SHARED
     ../cpp/mopro-ffi.cpp
-    ../cpp/generated/mopro_example_app.cpp
+    ../cpp/generated/mopro_example_app_noir.cpp
     cpp-adapter.cpp
 )
 
@@ -42,7 +42,7 @@ set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-z,max-page-size
 
 cmake_path(
   SET MY_RUST_LIB
-  ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libmopro_example_app.so
+  ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libmopro_example_app_noir.so
   NORMALIZE
 )
 add_library(my_rust_lib SHARED IMPORTED)

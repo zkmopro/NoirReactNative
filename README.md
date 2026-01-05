@@ -172,6 +172,10 @@ npm run ios
 4. Run the app on Android
 
 ```sh
+export ANDROID_HOME=~/Library/Android/sdk/
+```
+
+```sh
 npm run android
 ```
 
