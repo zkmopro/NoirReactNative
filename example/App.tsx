@@ -170,7 +170,15 @@ function NoirProofComponent() {
                 </ScrollView> */}
         <Text style={styles.label}>Proof:</Text>
         <ScrollView style={styles.outputScroll}>
-          <Text style={styles.output}>{new Uint8Array(proof)}</Text>
+          <Text style={styles.output}>
+            {proof.byteLength > 0
+              ? `Size: ${proof.byteLength} bytes\n` +
+                Array.from(new Uint8Array(proof.slice(0, 100)))
+                  .map((b) => b.toString(16).padStart(2, '0'))
+                  .join(' ') +
+                (proof.byteLength > 100 ? '...' : '')
+              : 'No proof generated'}
+          </Text>
         </ScrollView>
       </View>
     </View>
