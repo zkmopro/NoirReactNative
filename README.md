@@ -179,6 +179,16 @@ export ANDROID_HOME=~/Library/Android/sdk/
 npm run android
 ```
 
+> [!WARNING]
+> If you are using Expo, run the app with:
+> ```json
+> "ios": "expo run:ios",
+> "android": "expo run:android"
+> ```
+> These commands build and run the native iOS and Android projects. <br/>
+> And make sure the Android `minSdkVersion` is set to 28.
+> 
+
 ## Community
 
 - X account: <a href="https://twitter.com/zkmopro"><img src="https://img.shields.io/twitter/follow/zkmopro?style=flat-square&logo=x&label=zkmopro"></a>
