@@ -1,7 +1,7 @@
 {
-  "name": "mopro-ffi",
+  "name": "noir-react-native",
   "version": "0.1.0",
-  "description": "Mopro FFI bindings for React Native",
+  "description": "Noir Proof Generator and Verifier for React Native",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
   "exports": {
@@ -49,14 +49,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zkmopro/react-native-app.git"
+    "url": "git+https://github.com/zkmopro/NoirReactNative.git"
   },
   "author": "ZK Mopro Team (https://zkmopro.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zkmopro/react-native-app/issues"
+    "url": "https://github.com/zkmopro/NoirReactNative/issues"
   },
-  "homepage": "https://github.com/zkmopro/react-native-app#readme",
+  "homepage": "https://github.com/zkmopro/NoirReactNative#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

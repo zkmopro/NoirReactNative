@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "expo": "~52.0.44",
-    "mopro-ffi": "file:../",
+    "noir-react-native": "file:../",
     "react": "18.3.1",
     "react-is": "^19.2.3",
     "react-native": "0.76.9",

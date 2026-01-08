@@ -21,7 +21,7 @@ Or add this in `package.json`
 
 ```json
 "dependencies": {
-    "mopro-ffi": "github:zkmopro/NoirReactNative"
+    "noir-react-native": "github:zkmopro/NoirReactNative"
 }
 ```
 
@@ -37,7 +37,7 @@ import {
   getNoirVerificationKey,
   generateNoirProof,
   verifyNoirProof,
-} from 'mopro-ffi';
+} from 'noir-react-native';
 ```
 
 ### Load circuit and srs

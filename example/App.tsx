@@ -1,5 +1,4 @@
 import {
-  Image,
   StyleSheet,
   Button,
   TextInput,
@@ -12,7 +11,7 @@ import {
   getNoirVerificationKey,
   generateNoirProof,
   verifyNoirProof,
-} from 'mopro-ffi';
+} from 'noir-react-native';
 import * as FileSystem from 'expo-file-system';
 import { useState } from 'react';
 

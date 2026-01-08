@@ -3,8 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "mopro-ffi": ["../src/index"],
-      "mopro-ffi/*": ["../src/*"]
+      "noir-react-native": ["../src/index"],
+      "noir-react-native/*": ["../src/*"]
     }
   }
 }

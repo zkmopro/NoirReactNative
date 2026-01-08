@@ -1,5 +1,5 @@
 import { registerRootComponent } from 'expo';
-import { uniffiInitAsync } from 'mopro-ffi';
+import { uniffiInitAsync } from 'noir-react-native';
 import App from './App';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
