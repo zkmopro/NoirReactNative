@@ -40,14 +40,14 @@ async function ensureCircuitExists() {
 
     try {
       const circuitUrl =
-        'https://raw.githubusercontent.com/zkmopro/mopro/54a930d90295ddf14f77983340a5a15cf6af63f6/cli/src/template/init/test-vectors/noir/noir_multiplier2.json';
+        'https://raw.githubusercontent.com/zkmopro/mopro/cd60373c17bad744c0c101e66ecd2801005540d1/cli/src/template/init/test-vectors/noir/noir_multiplier2.json';
       const circuitDownloadResult = await FileSystem.downloadAsync(
         circuitUrl,
         circuitFilePath
       );
       console.log('Circuit file downloaded to:', circuitDownloadResult.uri);
       const srsUrl =
-        'https://github.com/zkmopro/mopro/raw/54a930d90295ddf14f77983340a5a15cf6af63f6/cli/src/template/init/test-vectors/noir/noir_multiplier2.srs';
+        'https://github.com/zkmopro/mopro/raw/cd60373c17bad744c0c101e66ecd2801005540d1/cli/src/template/init/test-vectors/noir/noir_multiplier2.srs';
       const srsDownloadResult = await FileSystem.downloadAsync(
         srsUrl,
         srsFilePath

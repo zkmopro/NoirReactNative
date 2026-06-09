@@ -186,7 +186,7 @@ npm run android
 > "android": "expo run:android"
 > ```
 > These commands build and run the native iOS and Android projects. <br/>
-> And make sure the Android `minSdkVersion` is set to 28.
+> And make sure the Android `minSdkVersion` is set to 30 (required by the noir-rs v1.0.0-beta.19 barretenberg prebuilt).
 > 
 
 ## Community
