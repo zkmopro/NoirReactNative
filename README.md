@@ -147,6 +147,19 @@ cp -R \
 
 5. Update the [check-mopro-download.sh](check-mopro-download.sh) script
 
+> [!NOTE]
+> **noir-rs v1.0.0-beta.19 build constraints.** The `ubrn:ios` / `ubrn:android`
+> scripts intentionally **omit `--and-generate`** and reuse the committed bindings
+> in `src/generated/` and `cpp/generated/`. Current `uniffi-bindgen-react-native`
+> (through 0.31.0-3) panics when regenerating bindings for this crate
+> (`Module path should map to namespace: unresolved module path
+> mopro_example_app_noir::error`) because `mopro-ffi`'s `app!()` macro exports
+> items from Rust submodules (`error`, `circom_stub`, `halo2_stub`, `noir`) that
+> ubrn's TypeScript generator can't map. The committed bindings already match
+> beta.19, so regeneration is not needed — only the Rust library is rebuilt.
+> `ubrn:ios` also pins targets to `aarch64-apple-ios,aarch64-apple-ios-sim`
+> because barretenberg-rs (beta.19) ships no `x86_64-apple-ios` prebuilt.
+
 ## Test the package
 
 Use the example app folder:
