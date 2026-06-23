@@ -69,7 +69,6 @@ async function ensureCircuitExists() {
 function NoirProofComponent() {
   const [a, setA] = useState('3');
   const [b, setB] = useState('4');
-  const [inputs, setInputs] = useState<string[]>([]);
   const [proof, setProof] = useState<ArrayBuffer>(new ArrayBuffer(0));
   const [isValid, setIsValid] = useState<string>('');
   const [vk, setVk] = useState<ArrayBuffer>(new ArrayBuffer(0));
@@ -162,11 +161,6 @@ function NoirProofComponent() {
       <View style={styles.stepContainer}>
         <Text style={styles.label}>Proof is Valid:</Text>
         <Text style={styles.output}>{isValid}</Text>
-        {/* TODO: add public signals */}
-        {/* <ThemedText type="subtitle">Public Signals:</ThemedText>
-                <ScrollView style={styles.outputScroll}>
-                    <Text style={styles.output}>{JSON.stringify(inputs)}</Text>
-                </ScrollView> */}
         <Text style={styles.label}>Proof:</Text>
         <ScrollView style={styles.outputScroll}>
           <Text style={styles.output}>
